@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Menu, X, ArrowRight, Sparkles, Shield, Crown, Diamond } from 'lucide-react';
+import { AlignCenter, X, ArrowRight, Sparkles, Shield, Crown, Diamond } from 'lucide-react';
 
 const Temp52 = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -105,7 +105,7 @@ const Temp52 = () => {
                 onClick={() => setIsMenuOpen(!isMenuOpen)}
                 className="text-gray-300 hover:text-white transition-colors duration-300"
               >
-                {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+                {isMenuOpen ? <X size={24} /> : <AlignCenter size={24} />}
               </button>
             </div>
           </div>
