@@ -7,7 +7,7 @@ const Navbar = () => {
     <nav className="bg-black text-white px-4 md:px-8 py-4 flex justify-between items-center">
       {/* Logo */}
       <div className="flex items-center space-x-2">
-        <span className="text-green-400 text-2xl font-bold">OneClick</span>
+        <span className="text-2xl font-bold">Scaffold<span className="text-green-400">X</span></span>
       </div>
 
       {/* Desktop Navigation */}
