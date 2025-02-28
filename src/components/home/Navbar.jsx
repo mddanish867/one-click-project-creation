@@ -88,7 +88,7 @@ const Temp52 = () => {
           <div className="flex justify-between h-24 items-center">
             <div className="flex-shrink-0">
               <span className="text-2xl font-extralight tracking-[0.2em] text-white">
-                OPULENT<span className="text-rose-400 text-5xl">.</span>
+                ScaffoldX<span className="text-rose-400 text-5xl">.</span>
               </span>
             </div>
             <div className="hidden md:flex items-center space-x-12">
