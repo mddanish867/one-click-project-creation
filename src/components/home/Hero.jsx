@@ -1,6 +1,7 @@
 const Hero = () => {
   return (
     <section className="py-24 bg-black text-white">
+      
       <div className="container mx-auto px-4 text-center">
         <h1 className="text-5xl md:text-6xl font-bold leading-tight">
           Launch Your Next Project in <span className="text-green-400">One Click!</span>
