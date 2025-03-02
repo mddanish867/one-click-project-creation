@@ -1,12 +1,14 @@
 import { useState } from "react";
 
 const Sidebar = ({ setActiveTab }) => {
-  const menuItems = ["Dashboard", "New Project", "Settings", "Help"];
+  const menuItems = ["Overview", "New Project", "Settings", "Help"];
 
   return (
     <aside className="w-64 bg-gray-900 text-white h-screen p-6">
-      <h2 className="text-xl font-bold mb-6">OneClick Setup</h2>
-      <ul className="space-y-4">
+      <span className="text-2xl font-extralight tracking-[0.2em] text-white">
+                ScaffoldX<span className="text-rose-400 text-5xl">.</span>
+              </span>
+      <ul className="space-y-4 mt-4">
         {menuItems.map((item, index) => (
           <li
             key={index}

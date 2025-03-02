@@ -7,7 +7,7 @@ import Settings from "./Settings";
 import Help from "./Help";
 
 const DashboardLayout = () => {
-  const [activeTab, setActiveTab] = useState("Dashboard");
+  const [activeTab, setActiveTab] = useState("Overview");
   const [projects, setProjects] = useState([]);
 
   const handleCreateProject = (newProject) => {
@@ -18,7 +18,7 @@ const DashboardLayout = () => {
     <div className="flex">
       <Sidebar setActiveTab={setActiveTab} />
       <main className="flex-1 p-6">
-        {activeTab === "Dashboard" && <DashboardHome />}
+        {activeTab === "Overview" && <DashboardHome />}
         {activeTab === "New Project" && <NewProjectForm onCreateProject={handleCreateProject} />}
         {activeTab === "Settings" && <Settings />}
         {activeTab === "Help" && <Help />}
