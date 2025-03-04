@@ -1,7 +1,8 @@
 import { useState } from "react";
 import Home from "./components/home/Home";
 import DashboardLayout from "./components/dashboard/DashboardLayout"
-
+import { ThemeProvider } from './context/ThemeContext';
+import AnimatedBackground from './components/AnimatedBackground';
 function App() {
   const [isDashboard, setIsDashboard] = useState(false);
 
@@ -9,7 +10,7 @@ function App() {
     <>
 
 
-      <div>
+      {/* <div>
         {!isDashboard ? (
           <>
             <Home />
@@ -23,7 +24,13 @@ function App() {
         ) : (
           <DashboardLayout />
         )}
+      </div> */}
+      <ThemeProvider>
+      <div className="min-h-screen bg-[#030712] text-white">
+        <AnimatedBackground />
+        <Home />
       </div>
+    </ThemeProvider>
     </>
   )
 }

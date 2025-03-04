@@ -1,39 +1,35 @@
+import React from "react";
+
 const stats = [
   { value: "5000+", label: "Projects Created" },
   { value: "2x", label: "Faster Development" },
-  { value: "99%", label: "Setup Success Rate" }
+  { value: "99%", label: "Setup Success Rate" },
 ];
 
 const Stats = () => {
   return (
-    <section className="py-20 bg-black text-white">
-      <div className="container mx-auto px-4">
-        <h2 className="text-3xl md:text-4xl font-bold text-center uppercase tracking-wider">
-          Our <span className="text-green-400">Impact</span>
+    <section className="relative py-24 bg-black text-white text-center overflow-hidden">
+      <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
+        <h2 className="text-4xl md:text-5xl font-extralight tracking-wider mb-12">
+          Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-rose-400 to-purple-500">Impact</span>
         </h2>
         
-        <div className="mt-16 flex flex-wrap justify-center gap-8 md:gap-16 lg:gap-24">
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-8">
           {stats.map((stat, index) => (
-            <div key={index} className="relative p-8 group">
-              {/* Background border effect */}
-              <div className="absolute inset-0 border border-gray-800 group-hover:border-green-500 transition-colors duration-300"></div>
-              
-              {/* Stat value */}
-              <div className="text-5xl md:text-6xl font-bold text-green-400">
+            <div key={index} className="relative p-6 border border-gray-800 rounded-lg shadow-xl transition-transform transform hover:scale-105">
+              <h3 className="text-4xl font-semibold bg-clip-text text-transparent bg-gradient-to-r from-rose-400 to-purple-500">
                 {stat.value}
-              </div>
-              
-              {/* Stat label */}
-              <p className="mt-4 text-lg uppercase tracking-wider">
-                {stat.label}
-              </p>
-              
-              {/* Decorative element */}
-              <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-12 h-1 bg-green-500 group-hover:w-20 transition-all duration-300"></div>
+              </h3>
+              <p className="text-gray-300 mt-2 text-lg tracking-wide">{stat.label}</p>
             </div>
           ))}
         </div>
       </div>
+      
+      {/* Decorative Background Effects */}
+      <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-purple-500/20 rounded-full filter blur-3xl mix-blend-multiply animate-blob"></div>
+      <div className="absolute top-1/3 right-1/4 w-96 h-96 bg-rose-500/20 rounded-full filter blur-3xl mix-blend-multiply animate-blob animation-delay-2000"></div>
+      <div className="absolute bottom-1/4 left-1/3 w-96 h-96 bg-amber-500/20 rounded-full filter blur-3xl mix-blend-multiply animate-blob animation-delay-4000"></div>
     </section>
   );
 };

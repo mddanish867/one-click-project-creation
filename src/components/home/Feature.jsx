@@ -1,31 +1,65 @@
-const features = [
-  { title: "One-click Setup", icon: "⚡" },
-  { title: "Fast Project Creation", icon: "🚀" },
-  { title: "Supports React & Next.js", icon: "🛠" },
-  { title: "Auto-installs Tailwind & ShadCN", icon: "🎨" },
-];
+// src/components/FeaturesSection.js
+import { useState, useEffect } from 'react';
+import { Sparkles, Shield, Crown, Diamond } from 'lucide-react';
+import { useTheme } from '../../context/ThemeContext';
 
-const Features = () => {
+const FeaturesSection = () => {
+  const theme = useTheme();
+  const [activeFeature, setActiveFeature] = useState(0);
+
+  const features = [
+    {
+      title: "Exceptional Analytics",
+      description: "Discover insights with unparalleled precision and elegance",
+      icon: Sparkles,
+      gradient: "from-rose-400 to-purple-500"
+    },
+    {
+      title: "Elite Security",
+      description: "Protection crafted for the most discerning clients",
+      icon: Shield,
+      gradient: "from-amber-400 to-rose-500"
+    },
+    {
+      title: "Premium Experience",
+      description: "Curated interfaces designed for excellence",
+      icon: Crown,
+      gradient: "from-purple-400 to-blue-500"
+    },
+    {
+      title: "Bespoke Solutions",
+      description: "Tailored perfection for your unique needs",
+      icon: Diamond,
+      gradient: "from-blue-400 to-emerald-500"
+    }
+  ];
+
+  // Auto-rotate active feature
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setActiveFeature((prev) => (prev + 1) % features.length);
+    }, 3000);
+    return () => clearInterval(interval);
+  }, [features.length]);
+
   return (
-    <section className="py-20 bg-black text-white">
-      <div className="container mx-auto px-4">
-        <h2 className="text-3xl md:text-4xl font-bold text-center uppercase tracking-wider">
-          Key <span className="text-green-400">Features</span>
+    <section id="features" className="relative py-32">
+      <div className="max-w-7xl mx-auto px-6 lg:px-8">
+        <h2 className={`text-center text-4xl mb-6 ${theme.typography.heading}`}>
+          The ScaffoldX Difference
         </h2>
-        
-        <div className="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {features.map((feature, index) => (
-            <div 
-              key={index} 
-              className="p-8 border border-gray-800 hover:border-green-500 transition-all duration-300 group"
+        <p className={`text-center ${theme.colors.text.secondary} max-w-2xl mx-auto ${theme.typography.body} mb-12`}>
+          Explore the features that set us apart, delivering an exclusive experience for discerning clients.
+        </p>
+        <div className="flex flex-col md:flex-row gap-8">
+          {features.map((feature, idx) => (
+            <div
+              key={idx}
+              className={`relative p-8 rounded-lg shadow-lg bg-gradient-to-br ${feature.gradient} transition-transform transform ${activeFeature === idx ? "scale-105" : "scale-100"}`}
             >
-              <div className="text-5xl text-green-400 group-hover:scale-110 transition-transform duration-300">
-                {feature.icon}
-              </div>
-              <h3 className="mt-6 text-xl font-bold uppercase tracking-wider">
-                {feature.title}
-              </h3>
-              <div className="mt-4 h-1 w-12 bg-green-500 mx-auto group-hover:w-24 transition-all duration-300"></div>
+              <feature.icon className="w-10 h-10 text-white mb-4" />
+              <h3 className={`text-2xl mb-4 ${theme.typography.heading}`}>{feature.title}</h3>
+              <p className={`${theme.colors.text.secondary} ${theme.typography.body}`}>{feature.description}</p>
             </div>
           ))}
         </div>
@@ -34,4 +68,4 @@ const Features = () => {
   );
 };
 
-export default Features;
+export default FeaturesSection;
