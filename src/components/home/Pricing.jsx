@@ -53,7 +53,7 @@ const PricingSection = () => {
           {pricingPlans.map((plan, idx) => (
             <div
               key={idx}
-              className={`p-24 rounded-none shadow-xl bg-gradient-to-br ${plan.gradient} relative transition-all duration-500 hover:scale-105`}
+              className={`p-10 rounded-none shadow-xl bg-gradient-to-br ${plan.gradient} relative transition-all duration-500 hover:scale-105`}
             >
               {plan.popular && (
                 <span className="absolute top-4 right-4 bg-rose-500 text-white py-1 px-4 rounded-full text-xs font-semibold">
