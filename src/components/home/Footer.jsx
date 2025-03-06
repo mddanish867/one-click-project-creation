@@ -1,18 +1,27 @@
-import { useTheme } from "../../context/ThemeContext";
+import React from 'react'
 
 const Footer = () => {
-  const theme = useTheme();
-
   return (
-    <footer
-      className={`py-12 text-center ${theme.colors.background.secondary} relative overflow-hidden`}
-    >
-      <div className="absolute inset-0 w-full h-full bg-gradient-to-br from-rose-400/10 to-purple-500/10 mix-blend-multiply blur-3xl"></div>
-      <p className="relative text-gray-400 text-sm z-10">
-        &copy; {new Date().getFullYear()} ScaffoldX. All rights reserved.
-      </p>
-    </footer>
-  );
-};
+    <>
+    {/* Footer */}
+    <footer className="py-12 border-t border-gray-800">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center">
+            <div className="text-2xl font-thin tracking-wider mb-6">
+            <span className="text-2xl font-thin tracking-wider">
+              <a href="/">
+                ScaffoldX<span className="text-emerald-400 text-3xl">.</span>
+              </a>
+            </span>
+            </div>
+            <div className="text-sm text-gray-400">
+              © {new Date().getFullYear()} ScaffoldX. All rights reserved.
+            </div>
+          </div>
+        </div>
+      </footer>
+    </>
+  )
+}
 
-export default Footer;
+export default Footer

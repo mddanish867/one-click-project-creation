@@ -1,67 +1,115 @@
-// src/components/Navbar.js
-import { useState, useEffect } from 'react';
-import { AlignCenter, X } from 'lucide-react';
+import React, { useState, useEffect } from "react";
+import {
+  AlignRight,
+  X, 
+} from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 const Navbar = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [scrolled, setScrolled] = useState(false);
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const [scrolled, setScrolled] = useState(false);
+    const navigate = useNavigate();
 
-  useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 20);
-    };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+    useEffect(() => {
+        const handleScroll = () => {
+          setScrolled(window.scrollY > 20);
+        };
+        window.addEventListener("scroll", handleScroll);
+        return () => window.removeEventListener("scroll", handleScroll);
+      }, []);
 
+      const handleGetAccess = () => {
+        navigate("/login")
+      }
   return (
-    <nav className={`fixed w-full z-50 transition-all duration-500 ${scrolled ? 'bg-gray-900/80 backdrop-blur-xl' : 'bg-transparent'}`}>
-      <div className="max-w-7xl mx-auto px-6 lg:px-8">
-        <div className="flex justify-between h-24 items-center">
-          <div className="flex-shrink-0">
-            <span className="text-2xl font-extralight tracking-[0.2em] text-white">
-              ScaffoldX<span className="text-rose-400 text-5xl">.</span>
-            </span>
-          </div>
-          <div className="hidden md:flex items-center space-x-12">
-            <a href="#home" className="text-gray-300 hover:text-white tracking-wider text-sm transition-colors duration-500">Home</a>
-            <a href="#features" className="text-gray-300 hover:text-white tracking-wider text-sm transition-colors duration-500">Features</a>
-            <a href="#pricing" className="text-gray-300 hover:text-white tracking-wider text-sm transition-colors duration-500">Pricing</a>
-            <a href="#contact" className="text-gray-300 hover:text-white tracking-wider text-sm transition-colors duration-500">Docs</a>
-            <button className="group relative px-8 py-3 overflow-hidden rounded-none bg-gradient-to-r from-rose-400 to-purple-500 transition-all duration-500">
-              <div className="absolute inset-0 w-0 bg-gradient-to-r from-purple-500 to-rose-400 transition-all duration-500 ease-out group-hover:w-full"></div>
-              <span className="relative text-sm tracking-wider">Begin Journey</span>
-            </button>
-          </div>
-          <div className="md:hidden">
-            <button
-              onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="text-gray-300 hover:text-white transition-colors duration-300"
-            >
-              {isMenuOpen ? <X size={24} /> : <AlignCenter size={24} />}
-            </button>
-          </div>
-        </div>
-      </div>
+    <>
 
-      {/* Mobile Navigation */}
-      {isMenuOpen && (
-        <div className="md:hidden absolute w-full bg-gray-900/95 backdrop-blur-xl">
-          <div className="px-6 pt-2 pb-3 space-y-1">
-            <a href="#home" className="block px-3 py-4 text-gray-300 hover:text-white tracking-wider text-sm transition-colors duration-300">Experience</a>
-            <a href="#features" className="block px-3 py-4 text-gray-300 hover:text-white tracking-wider text-sm transition-colors duration-300">Features</a>
-            <a href="#pricing" className="block px-3 py-4 text-gray-300 hover:text-white tracking-wider text-sm transition-colors duration-300">Investment</a>
-            <a href="#contact" className="block px-3 py-4 text-gray-300 hover:text-white tracking-wider text-sm transition-colors duration-300">Connect</a>
-            <div className="px-3 py-4">
-              <button className="w-full bg-gradient-to-r from-rose-400 to-purple-500 text-white px-8 py-3 rounded-none text-sm tracking-wider">
-                Get Started
+    <nav
+        className={`fixed w-full z-50 transition-all duration-300 ${
+          scrolled ? "bg-black/80 backdrop-blur-lg" : "bg-transparent"
+        }`}
+      >
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex justify-between h-20 items-center">
+            <div className="flex items-center">
+              <span className="text-2xl font-thin tracking-wider">
+                <a href="/">
+                ScaffoldX<span className="text-emerald-400 text-3xl">.</span>
+                </a>
+              </span>
+            </div>
+
+            {/* Desktop Menu */}
+            <div className="hidden md:flex items-center space-x-12">
+              <a
+                href="/features"
+                className="text-sm font-light tracking-wider hover:text-emerald-400 transition-colors"
+              >
+                FEATURES
+              </a>
+              <a
+                href="/solutions"
+                className="text-sm font-light tracking-wider hover:text-emerald-400 transition-colors"
+              >
+                SOLUTIONS
+              </a>
+              <a
+                href="/enterprise"
+                className="text-sm font-light tracking-wider hover:text-emerald-400 transition-colors"
+              >
+                ENTERPRISE
+              </a>
+              <a
+                href="/pricing"
+                className="text-sm font-light tracking-wider hover:text-emerald-400 transition-colors"
+              >
+                PRICING
+              </a>
+              <button
+              onClick={handleGetAccess}
+              className="border border-emerald-400 text-emerald-400 px-6 py-2 text-sm tracking-wider hover:bg-emerald-400 hover:text-black transition-all duration-300">
+                GET ACCESS
+              </button>
+            </div>
+
+            {/* Mobile Menu Button */}
+            <div className="md:hidden">
+              <button onClick={() => setIsMenuOpen(!isMenuOpen)}>
+                {isMenuOpen ? (
+                  <X className="w-6 h-6" />
+                ) : (
+                  <AlignRight className="w-6 h-6" />
+                )}
               </button>
             </div>
           </div>
         </div>
-      )}
-    </nav>
-  );
-};
 
-export default Navbar;
+        {/* Mobile Menu */}
+        {isMenuOpen && (
+          <div className="md:hidden min-h-screen bg-gradient-to-b from-gray-900 via-gray-900 to-black backdrop-blur-lg">
+            <div className="px-4 py-6 space-y-4">
+              <a href="/features" className="block text-sm tracking-wider">
+                FEATURES
+              </a>
+              <a href="/solutions" className="block text-sm tracking-wider">
+                SOLUTIONS
+              </a>
+              <a href="/enterprise" className="block text-sm tracking-wider">
+                ENTERPRISE
+              </a>
+              <a
+                href="/pricing"
+                className="text-sm font-light tracking-wider hover:text-emerald-400 transition-colors"
+              >
+                PRICING
+              </a>
+            </div>
+          </div>
+        )}
+      </nav>
+    </>
+  )
+}
+
+export default Navbar
