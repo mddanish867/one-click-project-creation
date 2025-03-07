@@ -20,6 +20,9 @@ import SetupSummary from "./components/projects/SetupSummary"
 import SuccessMessage from "./components/projects/SuccessMessage"
 import TechStackSelector from "./components/projects/TechStackSelector"
 import TemplateSelector from "./components/projects/TemplateSelector"
+import GeometricHero  from "./components/landingpage/Banner1"
+import ElegantGeometricHeroes from "./components/landingpage/Banner2"
+import SaasDarkHeroes from "./components/landingpage/Banner3"
 function App() {
 
   return (
@@ -50,6 +53,10 @@ function App() {
           <Route path="/success" element={<SuccessMessage />} />
           <Route path="/tech-selector" element={<TechStackSelector />} />
           <Route path="/temp-selector" element={<TemplateSelector />} />
+          <Route path="/banner3" element={<SaasDarkHeroes />} />
+          <Route path="/banner2" element={<ElegantGeometricHeroes />} />
+          <Route path="/banner1" element={<GeometricHero />} />
+
         </Routes>
       </Router>
     </>

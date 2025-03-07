@@ -34,7 +34,7 @@ const Navbar = () => {
             <div className="flex items-center">
               <span className="text-2xl font-thin tracking-wider">
                 <a href="/">
-                ScaffoldX<span className="text-emerald-400 text-3xl">.</span>
+                ScaffoldX<span className="text-pink-600 text-5xl">.</span>
                 </a>
               </span>
             </div>
@@ -43,31 +43,31 @@ const Navbar = () => {
             <div className="hidden md:flex items-center space-x-12">
               <a
                 href="/features"
-                className="text-sm font-light tracking-wider hover:text-emerald-400 transition-colors"
+                className="text-sm font-light tracking-wider hover:text-pink-400 transition-colors"
               >
                 FEATURES
               </a>
               <a
                 href="/solutions"
-                className="text-sm font-light tracking-wider hover:text-emerald-400 transition-colors"
+                className="text-sm font-light tracking-wider hover:text-pink-400 transition-colors"
               >
                 SOLUTIONS
               </a>
               <a
                 href="/enterprise"
-                className="text-sm font-light tracking-wider hover:text-emerald-400 transition-colors"
+                className="text-sm font-light tracking-wider hover:text-pink-400 transition-colors"
               >
                 ENTERPRISE
               </a>
               <a
                 href="/pricing"
-                className="text-sm font-light tracking-wider hover:text-emerald-400 transition-colors"
+                className="text-sm font-light tracking-wider hover:text-pink-400 transition-colors"
               >
                 PRICING
               </a>
               <button
               onClick={handleGetAccess}
-              className="border border-emerald-400 text-emerald-400 px-6 py-2 text-sm tracking-wider hover:bg-emerald-400 hover:text-black transition-all duration-300">
+              className="border border-pink-600/60 bg-pink-600/20 text-pink-600 px-6 py-2 text-sm tracking-wider hover:bg-pink-600 hover:text-white transition-all duration-300">
                 GET ACCESS
               </button>
             </div>
@@ -87,7 +87,7 @@ const Navbar = () => {
 
         {/* Mobile Menu */}
         {isMenuOpen && (
-          <div className="md:hidden min-h-screen bg-gradient-to-b from-gray-900 via-gray-900 to-black backdrop-blur-lg">
+          <div className="md:hidden min-h-screen bg-gradient-to-b from-pink-900/30 via-pink-900/20 to-pink-900 backdrop-blur-lg">
             <div className="px-4 py-6 space-y-4">
               <a href="/features" className="block text-sm tracking-wider">
                 FEATURES
@@ -100,7 +100,7 @@ const Navbar = () => {
               </a>
               <a
                 href="/pricing"
-                className="text-sm font-light tracking-wider hover:text-emerald-400 transition-colors"
+                className="block text-sm tracking-wider"
               >
                 PRICING
               </a>
