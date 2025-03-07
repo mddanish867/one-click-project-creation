@@ -87,7 +87,7 @@ const LandingPage = () => {
         <div className="absolute inset-0 bg-gradient-to-br from-gray-900/90 via-gray-900/70 to-pink-900/30 z-0"></div>
         <div className="container relative z-10 mx-auto px-4 py-12 text-center">
           <div className="max-w-3xl mx-auto">
-            <div className="inline-block px-3 py-1 rounded-full bg-pink-500/20 text-pink-400 text-sm font-medium mb-6">
+            <div className="inline-block px-3 py-1 mt-24 rounded-full bg-pink-500/20 text-pink-400 text-sm font-medium mb-6">
               Non-Periodic Tiling
             </div>
             <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-pink-400 to-purple-400">
