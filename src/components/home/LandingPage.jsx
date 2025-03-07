@@ -91,17 +91,20 @@ const LandingPage = () => {
               Non-Periodic Tiling
             </div>
             <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-pink-400 to-purple-400">
-              Penrose Patterns
+            Launch Your Next
+            Project in <span className="block mt-2 font-light text-pink-600">
+              One Click!
+              </span>
             </h1>
             <p className="text-lg md:text-xl text-gray-300 max-w-2xl mx-auto mb-8">
-              Elegant aperiodic tiling patterns with five-fold rotational symmetry, creating infinite non-repeating
-              designs
+            No manual setup, just select, click, and code! Get your development environment ready in seconds.
+
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="px-6 py-3 rounded-md bg-pink-600 text-white font-medium hover:bg-pink-700 transition-colors">
+              <button className="px-6 py-3 rounded-none bg-pink-600 text-white font-medium hover:bg-pink-700 transition-colors">
                 Explore Patterns
               </button>
-              <button className="px-6 py-3 rounded-md border border-gray-700 text-white font-medium hover:bg-white/10 transition-colors">
+              <button className="px-6 py-3 rounded-none border border-gray-700 text-white font-medium hover:bg-white/10 transition-colors">
                 Learn More
               </button>
             </div>
