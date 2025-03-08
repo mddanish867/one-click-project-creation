@@ -1,66 +1,84 @@
-import React from "react";
-import { Rocket, Check } from "lucide-react";
+import React from 'react';
+import { Code, Folder, Package, Layout } from 'lucide-react';
 
 const SetupSummary = ({ setupData, onConfirm }) => {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-gray-900 via-gray-900 to-black flex items-center justify-center px-4 sm:px-6 lg:px-8">
-      <div className="w-full max-w-md">
-        {/* Logo */}
-        <div className="text-center mb-8">
-          <span className="text-2xl font-thin tracking-wider text-white">
-            <a href="/">
-              ScaffoldX<span className="text-pink-600 text-3xl">.</span>
-            </a>
-          </span>
-        </div>
-
-        {/* Summary Card */}
-        <div className="bg-black/30 border border-gray-800 p-8 backdrop-blur-lg text-white">
-          <h2 className="text-2xl font-thin tracking-wider text-center mb-8">
-            Setup Summary
-          </h2>
-
-          <div className="space-y-4 text-gray-300">
-            <div className="flex items-center justify-between border-b border-gray-800 pb-2">
-              <span className="text-sm tracking-wider text-gray-400">PROJECT NAME</span>
-              {/* <span className="font-medium">{setupData.projectName}</span> */}
-              <span className="font-medium">Projec Name</span>
-            </div>
-            
-            <div className="flex items-center justify-between border-b border-gray-800 pb-2">
-              <span className="text-sm tracking-wider text-gray-400">DIRECTORY</span>
-              {/* <span className="font-medium">{setupData.directory}</span> */}
-              <span className="font-medium">Directory</span>
-
-            </div>
-            
-            <div className="flex items-center justify-between border-b border-gray-800 pb-2">
-              <span className="text-sm tracking-wider text-gray-400">TECH STACK</span>
-              {/* <span className="font-medium">{setupData.techStack}</span> */}
-              <span className="font-medium">Tech Stack</span>
-
-            </div>
-            
-            <div className="flex items-center justify-between border-b border-gray-800 pb-2">
-              <span className="text-sm tracking-wider text-gray-400">DEPENDENCIES</span>
-              {/* <span className="font-medium">{setupData.dependencies.join(", ") || "None"}</span> */}
-              <span className="font-medium">Dependencies</span>
-            </div>
-            
-            <div className="flex items-center justify-between border-b border-gray-800 pb-2">
-              <span className="text-sm tracking-wider text-gray-400">TEMPLATE</span>
-              {/* <span className="font-medium">{setupData.template}</span> */}
-              <span className="font-medium">Template</span>
+    <div className="flex-1 flex flex-col items-center justify-center px-4">
+      <div className="w-full max-w-md p-6 bg-gray-800 rounded-lg shadow-lg">
+        <h2 className="text-2xl font-bold mb-6 text-center">Project Summary</h2>
+        
+        <div className="space-y-4">
+          {/* Project Name */}
+          <div className="bg-gray-700 rounded-lg p-4">
+            <div className="flex items-start">
+              <Code className="w-5 h-5 mr-3 text-pink-500 mt-1" />
+              <div>
+                <div className="text-sm text-gray-400">Project Name</div>
+                <div className="text-white font-medium">{setupData.projectName || "Not specified"}</div>
+              </div>
             </div>
           </div>
-
-          {/* Create Project Button */}
+          
+          {/* Directory */}
+          <div className="bg-gray-700 rounded-lg p-4">
+            <div className="flex items-start">
+              <Folder className="w-5 h-5 mr-3 text-pink-500 mt-1" />
+              <div>
+                <div className="text-sm text-gray-400">Installation Directory</div>
+                <div className="text-white font-medium">{setupData.directory || "Not specified"}</div>
+              </div>
+            </div>
+          </div>
+          
+          {/* Tech Stack */}
+          <div className="bg-gray-700 rounded-lg p-4">
+            <div className="flex items-start">
+              <Package className="w-5 h-5 mr-3 text-pink-500 mt-1" />
+              <div>
+                <div className="text-sm text-gray-400">Tech Stack</div>
+                <div className="text-white font-medium">{setupData.techStack || "Not specified"}</div>
+              </div>
+            </div>
+          </div>
+          
+          {/* Template */}
+          <div className="bg-gray-700 rounded-lg p-4">
+            <div className="flex items-start">
+              <Layout className="w-5 h-5 mr-3 text-pink-500 mt-1" />
+              <div>
+                <div className="text-sm text-gray-400">Template</div>
+                <div className="text-white font-medium">{setupData.template || "Not specified"}</div>
+              </div>
+            </div>
+          </div>
+          
+          {/* Dependencies */}
+          {setupData.dependencies && setupData.dependencies.length > 0 && (
+            <div className="bg-gray-700 rounded-lg p-4">
+              <div className="text-sm text-gray-400 mb-2">Dependencies</div>
+              <div className="flex flex-wrap gap-2">
+                {setupData.dependencies.map((dep, index) => (
+                  <span 
+                    key={index} 
+                    className="px-2 py-1 bg-gray-600 rounded-md text-xs text-white"
+                  >
+                    {dep}
+                  </span>
+                ))}
+              </div>
+            </div>
+          )}
+        </div>
+        
+        <div className="mt-8">
+          <p className="text-sm text-gray-400 mb-4 text-center">
+            Please review your project configuration before continuing.
+          </p>
           <button
-            className="mt-8 w-full bg-pink-600 text-black py-3 text-sm tracking-wider hover:bg-pink-400 transition-colors duration-300 flex items-center justify-center"
             onClick={onConfirm}
+            className="w-full py-3 bg-gradient-to-r from-pink-600 to-purple-600 text-white rounded-lg font-medium hover:opacity-90 transition-opacity"
           >
-            CREATE PROJECT
-            <Rocket className="ml-2 w-4 h-4" />
+            Create Project
           </button>
         </div>
       </div>
