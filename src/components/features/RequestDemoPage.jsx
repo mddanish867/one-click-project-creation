@@ -19,24 +19,24 @@ export default function RequestDemoPage() {
             <div>
               <label htmlFor="name" className="block text-sm font-medium text-gray-400 mb-2">Full Name</label>
               <input type="text" id="name" name="name" required
-                className="w-full px-4 py-3 bg-black/30 border border-gray-800 text-white focus:ring-1 focus:ring-emerald-400 focus:border-transparent outline-none" />
+                className="w-full px-4 py-3 bg-black/30 border border-gray-800 text-white focus:ring-1 focus:ring-pink-600 focus:border-transparent outline-none" />
             </div>
             <div>
               <label htmlFor="email" className="block text-sm font-medium text-gray-400 mb-2">Email Address</label>
               <input type="email" id="email" name="email" required
-                className="w-full px-4 py-3 bg-black/30 border border-gray-800 text-white focus:ring-1 focus:ring-emerald-400 focus:border-transparent outline-none" />
+                className="w-full px-4 py-3 bg-black/30 border border-gray-800 text-white focus:ring-1 focus:ring-pink-600 focus:border-transparent outline-none" />
             </div>
             <div>
               <label htmlFor="company" className="block text-sm font-medium text-gray-400 mb-2">Company Name</label>
               <input type="text" id="company" name="company" required
-                className="w-full px-4 py-3 bg-black/30 border border-gray-800 text-white focus:ring-1 focus:ring-emerald-400 focus:border-transparent outline-none" />
+                className="w-full px-4 py-3 bg-black/30 border border-gray-800 text-white focus:ring-1 focus:ring-pink-600 focus:border-transparent outline-none" />
             </div>
             <div>
               <label htmlFor="message" className="block text-sm font-medium text-gray-400 mb-2">Message</label>
               <textarea id="message" name="message" rows={4}
-                className="w-full px-4 py-3 bg-black/30 border border-gray-800 text-white focus:ring-1 focus:ring-emerald-400 focus:border-transparent outline-none"></textarea>
+                className="w-full px-4 py-3 bg-black/30 border border-gray-800 text-white focus:ring-1 focus:ring-pink-600 focus:border-transparent outline-none"></textarea>
             </div>
-            <button type="submit" className="w-full px-6 py-3 bg-emerald-400 text-black text-sm tracking-wider hover:bg-emerald-300 transition-colors duration-300 flex items-center justify-center group">
+            <button type="submit" className="w-full px-6 py-3 bg-pink-600 text-black text-sm tracking-wider hover:bg-pink-400 transition-colors duration-300 flex items-center justify-center group">
               REQUEST DEMO
               <ChevronRight className="ml-2 w-4 h-6 group-hover:translate-x-1 transition-transform duration-300" />
             </button>

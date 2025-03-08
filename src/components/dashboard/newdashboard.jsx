@@ -121,7 +121,7 @@ const Dashboard = () => {
                 <label className="block text-sm text-gray-400 mb-1">Title</label>
                 <input
                   type="text"
-                  className="w-full bg-gray-800 border border-gray-700 rounded-md px-3 py-2 focus:outline-none focus:border-emerald-400"
+                  className="w-full bg-gray-800 border border-gray-700 rounded-md px-3 py-2 focus:outline-none focus:border-pink-600"
                   onChange={(e) => setFormData({ ...formData, title: e.target.value })}
                 />
               </div>
@@ -135,7 +135,7 @@ const Dashboard = () => {
                 </button>
                 <button
                   type="submit"
-                  className="px-4 py-2 bg-emerald-400 text-black text-sm rounded"
+                  className="px-4 py-2 bg-pink-600 text-black text-sm rounded"
                 >
                   Create
                 </button>
@@ -169,7 +169,7 @@ const Dashboard = () => {
                 setActiveSection(item.id);
                 setSidebarOpen(false);
               }}
-              className={`flex items-center space-x-3 w-full px-4 py-2 rounded-md transition-colors ${activeSection === item.id ? 'bg-emerald-400/20 text-emerald-400' : 'text-gray-400 hover:text-white'
+              className={`flex items-center space-x-3 w-full px-4 py-2 rounded-md transition-colors ${activeSection === item.id ? 'bg-pink-600/20 text-pink-600' : 'text-gray-400 hover:text-white'
                 }`}
             >
               <item.icon className="w-5 h-5" />
@@ -197,7 +197,7 @@ const Dashboard = () => {
         </button>
         <span className="text-2xl font-thin tracking-wider">
           <a href="/">
-            ScaffoldX<span className="text-emerald-400 text-3xl">.</span>
+            ScaffoldX<span className="text-pink-600 text-3xl">.</span>
           </a>
         </span>
       </div>
@@ -222,7 +222,7 @@ const Dashboard = () => {
           <input
             type="text"
             placeholder="Search..."
-            className="w-96 bg-gray-900/50 border border-gray-800 rounded-md pl-10 pr-4 py-2 text-sm focus:outline-none focus:border-emerald-400/50"
+            className="w-96 bg-gray-900/50 border border-gray-800 rounded-md pl-10 pr-4 py-2 text-sm focus:outline-none focus:border-pink-600/50"
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
           />
@@ -232,14 +232,14 @@ const Dashboard = () => {
       <div className="flex items-center space-x-4">
         {/* Notifications */}
         <button className="relative">
-          <Bell className="w-5 h-5 text-gray-400 hover:text-emerald-400 transition-colors" />
-          <span className="absolute -top-1 -right-1 w-2 h-2 bg-emerald-400 rounded-full" />
+          <Bell className="w-5 h-5 text-gray-400 hover:text-pink-600 transition-colors" />
+          <span className="absolute -top-1 -right-1 w-2 h-2 bg-pink-600 rounded-full" />
         </button>
         
         {/* User Profile */}
         <div className="flex items-center space-x-2">
-          <div className="w-8 h-8 rounded-full bg-emerald-400/20 flex items-center justify-center">
-            <span className="text-sm text-emerald-400">AK</span>
+          <div className="w-8 h-8 rounded-full bg-pink-600/20 flex items-center justify-center">
+            <span className="text-sm text-pink-600">AK</span>
           </div>
           <ChevronDown className="w-4 h-4 text-gray-400 sm:block hidden" />
         </div>
@@ -254,7 +254,7 @@ const Dashboard = () => {
           <input
             type="text"
             placeholder="Search..."
-            className="w-full bg-gray-900/50 border border-gray-800 rounded-md pl-10 pr-4 py-2 text-sm focus:outline-none focus:border-emerald-400/50"
+            className="w-full bg-gray-900/50 border border-gray-800 rounded-md pl-10 pr-4 py-2 text-sm focus:outline-none focus:border-pink-600/50"
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
           />
@@ -281,7 +281,7 @@ const Dashboard = () => {
                 setModalType(activeSection);
                 setModalOpen(true);
               }}
-              className="px-4 py-2 bg-emerald-400 text-black text-sm tracking-wider hover:bg-emerald-300 transition-colors duration-300 flex items-center rounded"
+              className="px-4 py-2 bg-pink-600 text-black text-sm tracking-wider hover:bg-pink-400 transition-colors duration-300 flex items-center rounded"
             >
               <Plus className="w-4 h-4 mr-2" />
               New {activeSection.slice(0, -1)}
@@ -300,7 +300,7 @@ const Dashboard = () => {
                         <Trash2 className="w-4 h-4 text-gray-400 hover:text-red-400" />
                       </button>
                       <button>
-                        <Edit className="w-4 h-4 text-gray-400 hover:text-emerald-400" />
+                        <Edit className="w-4 h-4 text-gray-400 hover:text-pink-600" />
                       </button>
                     </div>
                   </div>
@@ -334,7 +334,7 @@ const Dashboard = () => {
                         <Trash2 className="w-4 h-4 text-gray-400 hover:text-red-400" />
                       </button>
                       <button>
-                        <Edit className="w-4 h-4 text-gray-400 hover:text-emerald-400" />
+                        <Edit className="w-4 h-4 text-gray-400 hover:text-pink-600" />
                       </button>
                     </div>
                   </div>
@@ -377,7 +377,7 @@ const Dashboard = () => {
                     </div>
                     <div className="flex justify-between text-gray-400">
                       <span>Status:</span>
-                      <span className="text-emerald-400">{repo.status}</span>
+                      <span className="text-pink-600">{repo.status}</span>
                     </div>
                   </div>
                 </div>
@@ -396,7 +396,7 @@ const Dashboard = () => {
                         {pipeline.status === 'Running' ? (
                           <PauseCircle className="w-4 h-4 text-gray-400 hover:text-yellow-400" />
                         ) : (
-                          <PlayCircle className="w-4 h-4 text-gray-400 hover:text-emerald-400" />
+                          <PlayCircle className="w-4 h-4 text-gray-400 hover:text-pink-600" />
                         )}
                       </button>
                       <button>
@@ -407,7 +407,7 @@ const Dashboard = () => {
                   <div className="space-y-2 text-sm">
                     <div className="flex justify-between text-gray-400">
                       <span>Status:</span>
-                      <span className={pipeline.status === 'Running' ? 'text-emerald-400' : 'text-gray-400'}>
+                      <span className={pipeline.status === 'Running' ? 'text-pink-600' : 'text-gray-400'}>
                         {pipeline.status}
                       </span>
                     </div>
@@ -421,8 +421,8 @@ const Dashboard = () => {
                           <div key={stage} className="flex items-center">
                             <div className="w-20">
                               <div className="text-xs text-gray-400 mb-1">{stage}</div>
-                              <div className="h-1 bg-emerald-400/20 rounded-full">
-                                <div className="h-full bg-emerald-400 rounded-full" style={{ width: '70%' }} />
+                              <div className="h-1 bg-pink-600/20 rounded-full">
+                                <div className="h-full bg-pink-600 rounded-full" style={{ width: '70%' }} />
                               </div>
                             </div>
                             {index < pipeline.stages.length - 1 && (
@@ -446,7 +446,7 @@ const Dashboard = () => {
                   { label: 'Active Bugs', value: bugs.length, icon: Bug, color: 'text-red-400' },
                   { label: 'User Stories', value: userStories.length, icon: BookOpen, color: 'text-blue-400' },
                   { label: 'Repositories', value: repositories.length, icon: GitBranch, color: 'text-purple-400' },
-                  { label: 'Active Pipelines', value: pipelines.length, icon: Workflow, color: 'text-emerald-400' }
+                  { label: 'Active Pipelines', value: pipelines.length, icon: Workflow, color: 'text-pink-600' }
                 ].map((stat, index) => (
                   <div key={index} className="bg-black/30 border border-gray-800 rounded-lg p-6">
                     <div className="flex items-center justify-between mb-4">
@@ -495,7 +495,7 @@ const Dashboard = () => {
                         <div className="flex-1 ml-4">
                           <div className="font-medium">{event.title}</div>
                           <div className="text-sm text-gray-400">{event.date}</div>
-                          <div className="text-xs text-emerald-400 mt-1">{event.status}</div>
+                          <div className="text-xs text-pink-600 mt-1">{event.status}</div>
                         </div>
                       </div>
                     ))}

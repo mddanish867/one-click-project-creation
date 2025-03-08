@@ -33,7 +33,7 @@ export default function DeleteProject() {
     <div className="min-h-screen bg-gradient-to-b from-gray-900 via-gray-900 to-black text-white flex flex-col">
       {/* Header with Back Button */}
       <div className="p-6">
-        <a href="/projects" className="inline-flex items-center text-sm text-gray-400 hover:text-emerald-400 transition-colors">
+        <a href="/projects" className="inline-flex items-center text-sm text-gray-400 hover:text-pink-600 transition-colors">
           <ArrowLeft className="w-4 h-4 mr-2" />
           Back to Projects
         </a>
@@ -46,7 +46,7 @@ export default function DeleteProject() {
           <div className="text-center mb-8">
             <span className="text-2xl font-thin tracking-wider">
               <a href="/">
-                ScaffoldX<span className="text-emerald-400 text-3xl">.</span>
+                ScaffoldX<span className="text-pink-600 text-3xl">.</span>
               </a>
             </span>
           </div>
@@ -68,7 +68,7 @@ export default function DeleteProject() {
                   <select
                     value={selectedProject || ''}
                     onChange={handleProjectSelect}
-                    className="w-full bg-black/30 border border-gray-800 py-3 pl-12 pr-4 text-white placeholder-gray-500 focus:border-emerald-400 focus:ring-0 focus:outline-none transition-colors rounded-lg appearance-none"
+                    className="w-full bg-black/30 border border-gray-800 py-3 pl-12 pr-4 text-white placeholder-gray-500 focus:border-pink-600 focus:ring-0 focus:outline-none transition-colors rounded-lg appearance-none"
                   >
                     <option value="">Select a project</option>
                     {projects.map((project) => (

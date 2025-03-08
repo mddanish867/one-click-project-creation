@@ -19,11 +19,11 @@ const ProgressIndicator = ({ step }) => {
             <div key={index} className="flex items-center">
               <div
                 className={`w-5 h-5 rounded-full mr-3 ${
-                  index < step ? "bg-emerald-400" : "bg-gray-800"
+                  index < step ? "bg-pink-600" : "bg-gray-800"
                 }`}
               />
               <span className={index < step 
-                ? "text-emerald-400 font-medium tracking-wider" 
+                ? "text-pink-600 font-medium tracking-wider" 
                 : "text-gray-400 tracking-wider"}>
                 {label}
               </span>

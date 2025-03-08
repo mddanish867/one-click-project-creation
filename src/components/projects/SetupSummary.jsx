@@ -9,7 +9,7 @@ const SetupSummary = ({ setupData, onConfirm }) => {
         <div className="text-center mb-8">
           <span className="text-2xl font-thin tracking-wider text-white">
             <a href="/">
-              ScaffoldX<span className="text-emerald-400 text-3xl">.</span>
+              ScaffoldX<span className="text-pink-600 text-3xl">.</span>
             </a>
           </span>
         </div>
@@ -56,7 +56,7 @@ const SetupSummary = ({ setupData, onConfirm }) => {
 
           {/* Create Project Button */}
           <button
-            className="mt-8 w-full bg-emerald-400 text-black py-3 text-sm tracking-wider hover:bg-emerald-300 transition-colors duration-300 flex items-center justify-center"
+            className="mt-8 w-full bg-pink-600 text-black py-3 text-sm tracking-wider hover:bg-pink-400 transition-colors duration-300 flex items-center justify-center"
             onClick={onConfirm}
           >
             CREATE PROJECT

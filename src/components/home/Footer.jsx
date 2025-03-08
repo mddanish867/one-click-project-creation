@@ -10,7 +10,7 @@ const Footer = () => {
             <div className="text-2xl font-thin tracking-wider mb-6">
             <span className="text-2xl font-thin tracking-wider">
               <a href="/">
-                ScaffoldX<span className="text-emerald-400 text-3xl">.</span>
+                ScaffoldX<span className="text-pink-600 text-5xl">.</span>
               </a>
             </span>
             </div>

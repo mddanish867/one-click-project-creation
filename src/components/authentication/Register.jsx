@@ -120,7 +120,7 @@ const Register = () => {
     <div className="min-h-screen bg-gradient-to-b from-gray-900 via-gray-900 to-black text-white flex flex-col">
       {/* Header with Back Button */}
       <div className="p-6">
-        <a href="/" className="inline-flex items-center text-sm text-gray-400 hover:text-emerald-400 transition-colors">
+        <a href="/" className="inline-flex items-center text-sm text-gray-400 hover:text-pink-600 transition-colors">
           <ArrowLeft className="w-4 h-4 mr-2" />
           Back to Home
         </a>
@@ -133,7 +133,7 @@ const Register = () => {
           <div className="text-center mb-8">
             <span className="text-2xl font-thin tracking-wider">
               <a href="/">
-                ScaffoldX<span className="text-emerald-400 text-3xl">.</span>
+                ScaffoldX<span className="text-pink-600 text-3xl">.</span>
               </a>
             </span>
           </div>
@@ -155,7 +155,7 @@ const Register = () => {
                     <User className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-500" />
                     <input
                       type="text"
-                      className="w-full bg-black/30 border border-gray-800 py-3 pl-12 pr-4 text-white placeholder-gray-500 focus:border-emerald-400 focus:ring-0 focus:outline-none transition-colors"
+                      className="w-full bg-black/30 border border-gray-800 py-3 pl-12 pr-4 text-white placeholder-gray-500 focus:border-pink-600 focus:ring-0 focus:outline-none transition-colors"
                       placeholder="Enter your full name"
                       required
                     />
@@ -171,7 +171,7 @@ const Register = () => {
                     <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-500" />
                     <input
                       type="email"
-                      className="w-full bg-black/30 border border-gray-800 py-3 pl-12 pr-4 text-white placeholder-gray-500 focus:border-emerald-400 focus:ring-0 focus:outline-none transition-colors"
+                      className="w-full bg-black/30 border border-gray-800 py-3 pl-12 pr-4 text-white placeholder-gray-500 focus:border-pink-600 focus:ring-0 focus:outline-none transition-colors"
                       placeholder="Enter your email"
                       required
                     />
@@ -187,7 +187,7 @@ const Register = () => {
                     <Phone className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-500" />
                     <input
                       type="tel"
-                      className="w-full bg-black/30 border border-gray-800 py-3 pl-12 pr-4 text-white placeholder-gray-500 focus:border-emerald-400 focus:ring-0 focus:outline-none transition-colors"
+                      className="w-full bg-black/30 border border-gray-800 py-3 pl-12 pr-4 text-white placeholder-gray-500 focus:border-pink-600 focus:ring-0 focus:outline-none transition-colors"
                       placeholder="Enter your phone number"
                       required
                     />
@@ -203,7 +203,7 @@ const Register = () => {
                     <Lock className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-500" />
                     <input
                       type={showPassword ? 'text' : 'password'}
-                      className="w-full bg-black/30 border border-gray-800 py-3 pl-12 pr-12 text-white placeholder-gray-500 focus:border-emerald-400 focus:ring-0 focus:outline-none transition-colors"
+                      className="w-full bg-black/30 border border-gray-800 py-3 pl-12 pr-12 text-white placeholder-gray-500 focus:border-pink-600 focus:ring-0 focus:outline-none transition-colors"
                       placeholder="Create a password"
                       required
                     />
@@ -225,7 +225,7 @@ const Register = () => {
                 <button
                   type="submit"
                   disabled={isLoading}
-                  className="w-full bg-emerald-400 text-black py-3 text-sm tracking-wider hover:bg-emerald-300 transition-colors duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
+                  className="w-full bg-pink-600 text-black py-3 text-sm tracking-wider hover:bg-pink-400 transition-colors duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
                 >
                   {isLoading ? 'CREATING ACCOUNT...' : 'CREATE ACCOUNT'}
                 </button>
@@ -233,7 +233,7 @@ const Register = () => {
                 {/* Sign In Link */}
                 <div className="text-center text-sm text-gray-400">
                   Already have an account?{' '}
-                  <a href="/login" className="text-emerald-400 hover:text-emerald-300 transition-colors">
+                  <a href="/login" className="text-pink-600 hover:text-pink-400 transition-colors">
                     Sign in
                   </a>
                 </div>
@@ -251,7 +251,7 @@ const Register = () => {
                       key={i}
                       type="text"
                       maxLength="1"
-                      className="w-12 h-12 text-center bg-black/30 border border-gray-800 text-white focus:border-emerald-400 focus:ring-0 focus:outline-none"
+                      className="w-12 h-12 text-center bg-black/30 border border-gray-800 text-white focus:border-pink-600 focus:ring-0 focus:outline-none"
                     />
                   ))}
                 </div>
@@ -260,7 +260,7 @@ const Register = () => {
                 <button
                   type="submit"
                   disabled={isLoading}
-                  className="w-full bg-emerald-400 text-black py-3 text-sm tracking-wider hover:bg-emerald-300 transition-colors duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
+                  className="w-full bg-pink-600 text-black py-3 text-sm tracking-wider hover:bg-pink-400 transition-colors duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
                 >
                   {isLoading ? 'VERIFYING...' : 'VERIFY EMAIL'}
                 </button>
@@ -268,7 +268,7 @@ const Register = () => {
                 {/* Resend Code Link */}
                 <div className="text-center text-sm text-gray-400">
                   Didn't receive the code?{' '}
-                  <button className="text-emerald-400 hover:text-emerald-300 transition-colors">
+                  <button className="text-pink-600 hover:text-pink-400 transition-colors">
                     Resend
                   </button>
                 </div>

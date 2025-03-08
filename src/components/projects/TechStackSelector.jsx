@@ -17,7 +17,7 @@ const TechStackSelector = ({ onNext }) => {
         <div className="text-center mb-8">
           <span className="text-2xl font-thin tracking-wider text-white">
             <a href="/">
-              ScaffoldX<span className="text-emerald-400 text-3xl">.</span>
+              ScaffoldX<span className="text-pink-600 text-3xl">.</span>
             </a>
           </span>
         </div>
@@ -36,7 +36,7 @@ const TechStackSelector = ({ onNext }) => {
               <div className="relative">
                 <Code className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-500 pointer-events-none" />
                 <select
-                  className="w-full bg-black/30 border border-gray-800 py-3 pl-12 pr-4 text-white appearance-none focus:border-emerald-400 focus:ring-0 focus:outline-none transition-colors"
+                  className="w-full bg-black/30 border border-gray-800 py-3 pl-12 pr-4 text-white appearance-none focus:border-pink-600 focus:ring-0 focus:outline-none transition-colors"
                   value={techStack}
                   onChange={(e) => setTechStack(e.target.value)}
                 >
@@ -54,7 +54,7 @@ const TechStackSelector = ({ onNext }) => {
 
             {/* Next Button */}
             <button
-              className={`w-full bg-emerald-400 text-black py-3 text-sm tracking-wider hover:bg-emerald-300 transition-colors duration-300 flex items-center justify-center ${
+              className={`w-full bg-pink-600 text-black py-3 text-sm tracking-wider hover:bg-pink-400 transition-colors duration-300 flex items-center justify-center ${
                 !techStack ? "opacity-50 cursor-not-allowed" : ""
               }`}
               disabled={!techStack}

@@ -33,7 +33,7 @@ const ProjectSetupForm = ({ onNext }) => {
                   type="text"
                   value={projectName}
                   onChange={(e) => setProjectName(e.target.value)}
-                  className="w-full bg-black/30 border border-gray-800 py-3 pl-12 pr-4 text-white placeholder-gray-500 focus:border-emerald-400 focus:ring-0 focus:outline-none transition-colors"
+                  className="w-full bg-black/30 border border-gray-800 py-3 pl-12 pr-4 text-white placeholder-gray-500 focus:border-pink-600 focus:ring-0 focus:outline-none transition-colors"
                   placeholder="Enter project name"
                 />
               </div>
@@ -50,7 +50,7 @@ const ProjectSetupForm = ({ onNext }) => {
                   type="text"
                   value={directory}
                   onChange={(e) => setDirectory(e.target.value)}
-                  className="w-full bg-black/30 border border-gray-800 py-3 pl-12 pr-4 text-white placeholder-gray-500 focus:border-emerald-400 focus:ring-0 focus:outline-none transition-colors"
+                  className="w-full bg-black/30 border border-gray-800 py-3 pl-12 pr-4 text-white placeholder-gray-500 focus:border-pink-600 focus:ring-0 focus:outline-none transition-colors"
                   placeholder="Select directory"
                 />
               </div>
@@ -58,7 +58,7 @@ const ProjectSetupForm = ({ onNext }) => {
 
             {/* Next Button */}
             <button
-              className={`w-full bg-emerald-400 text-black py-3 text-sm tracking-wider hover:bg-emerald-300 transition-colors duration-300 flex items-center justify-center ${
+              className={`w-full bg-pink-600 text-black py-3 text-sm tracking-wider hover:bg-pink-400 transition-colors duration-300 flex items-center justify-center ${
                 !projectName || !directory ? "opacity-50 cursor-not-allowed" : ""
               }`}
               disabled={!projectName || !directory}

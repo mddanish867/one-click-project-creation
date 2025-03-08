@@ -17,7 +17,7 @@ const TemplateSelector = ({ onNext }) => {
         <div className="text-center mb-8">
           <span className="text-2xl font-thin tracking-wider text-white">
             <a href="/">
-              ScaffoldX<span className="text-emerald-400 text-3xl">.</span>
+              ScaffoldX<span className="text-pink-600 text-3xl">.</span>
             </a>
           </span>
         </div>
@@ -38,7 +38,7 @@ const TemplateSelector = ({ onNext }) => {
                 key={tpl}
                 className={`relative block p-4 border cursor-pointer transition-colors ${
                   template === tpl 
-                    ? "border-emerald-400 bg-emerald-400/10" 
+                    ? "border-pink-600 bg-pink-600/10" 
                     : "border-gray-800 hover:border-gray-700 hover:bg-black/50"
                 }`}
                 onClick={() => setTemplate(tpl)}
@@ -48,7 +48,7 @@ const TemplateSelector = ({ onNext }) => {
                   <span className="tracking-wide">{tpl}</span>
                   
                   {template === tpl && (
-                    <div className="absolute right-4 w-4 h-4 rounded-full bg-emerald-400 flex items-center justify-center">
+                    <div className="absolute right-4 w-4 h-4 rounded-full bg-pink-600 flex items-center justify-center">
                       <Check className="w-3 h-3 text-black" />
                     </div>
                   )}
@@ -59,7 +59,7 @@ const TemplateSelector = ({ onNext }) => {
 
           {/* Next Button */}
           <button
-            className={`w-full bg-emerald-400 text-black py-3 text-sm tracking-wider hover:bg-emerald-300 transition-colors duration-300 flex items-center justify-center ${
+            className={`w-full bg-pink-600 text-black py-3 text-sm tracking-wider hover:bg-pink-400 transition-colors duration-300 flex items-center justify-center ${
               !template ? "opacity-50 cursor-not-allowed" : ""
             }`}
             disabled={!template}

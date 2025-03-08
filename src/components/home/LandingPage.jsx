@@ -35,22 +35,22 @@ const LandingPage = () => {
       title: "Executive Dashboard",
       description:
         "Sophisticated analytics and insights for strategic decision-making",
-      icon: <BarChart2 className="w-6 h-6 text-emerald-400" />,
+      icon: <BarChart2 className="w-6 h-6 text-pink-600" />,
     },
     {
       title: "Global Collaboration",
       description: "Seamless coordination across teams and time zones",
-      icon: <Globe className="w-6 h-6 text-emerald-400" />,
+      icon: <Globe className="w-6 h-6 text-pink-600" />,
     },
     {
       title: "Intelligent Automation",
       description: "AI-powered workflow optimization and resource allocation",
-      icon: <Zap className="w-6 h-6 text-emerald-400" />,
+      icon: <Zap className="w-6 h-6 text-pink-600" />,
     },
     {
       title: "Enterprise Security",
       description: "Bank-grade security protocols and compliance measures",
-      icon: <Shield className="w-6 h-6 text-emerald-400" />,
+      icon: <Shield className="w-6 h-6 text-pink-600" />,
     },
   ];
 
@@ -119,7 +119,7 @@ const LandingPage = () => {
             <h2 className="text-3xl font-thin tracking-wider mb-4">
               REFINED CAPABILITIES
             </h2>
-            <div className="w-20 h-px bg-emerald-400 mx-auto" />
+            <div className="w-20 h-px bg-pink-600 mx-auto" />
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
             {features.map((feature, index) => (
@@ -129,7 +129,7 @@ const LandingPage = () => {
                 onMouseEnter={() => setActiveFeature(index)}
               >
                 <div
-                  className={`p-8 border border-gray-800 hover:border-emerald-400/50 transition-all duration-500 relative ${
+                  className={`p-8 border border-gray-800 hover:border-pink-600/50 transition-all duration-500 relative ${
                     activeFeature === index ? "bg-black/50" : "bg-transparent"
                   }`}
                 >
@@ -155,7 +155,7 @@ const LandingPage = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
             {metrics.map((metric, index) => (
               <div key={index} className="text-center">
-                <div className="text-4xl font-light text-emerald-400 mb-2">
+                <div className="text-4xl font-light text-pink-600 mb-2">
                   {metric.value}
                 </div>
                 <div className="text-sm tracking-wider text-gray-400">
@@ -171,13 +171,13 @@ const LandingPage = () => {
       <div className="py-24 relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center">
-            <Award className="w-12 h-12 text-emerald-400 mx-auto mb-8" />
+            <Award className="w-12 h-12 text-pink-600 mx-auto mb-8" />
             <p className="text-2xl font-light italic leading-relaxed mb-8">
               "ScaffoldX has revolutionized how we manage global projects. The level
               of sophistication and attention to detail is unmatched in the
               industry."
             </p>
-            <div className="text-sm tracking-wider text-emerald-400 mb-2">
+            <div className="text-sm tracking-wider text-pink-600 mb-2">
               ALEXANDRA CHEN
             </div>
             <div className="text-sm tracking-wider text-gray-400">
@@ -198,7 +198,7 @@ const LandingPage = () => {
               Join the elite circle of organizations transforming their project
               management capabilities.
             </p>
-            <button className="px-12 py-4 bg-emerald-400 text-black text-sm tracking-wider hover:bg-emerald-300 transition-colors duration-300 flex items-center justify-center mx-auto group">
+            <button className="px-12 py-4 bg-pink-600 text-black text-sm tracking-wider hover:bg-pink-400 transition-colors duration-300 flex items-center justify-center mx-auto group">
               BEGIN YOUR JOURNEY
               <ChevronRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
             </button>

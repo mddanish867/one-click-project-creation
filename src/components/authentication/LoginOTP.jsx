@@ -36,7 +36,7 @@ export default function LoginOTP() {
           <div className="text-center mb-8">
             <span className="text-2xl font-thin tracking-wider">
               <a href="/">
-                ScaffoldX<span className="text-emerald-400 text-3xl">.</span>
+                ScaffoldX<span className="text-pink-600 text-3xl">.</span>
               </a>
             </span>
           </div>
@@ -60,7 +60,7 @@ export default function LoginOTP() {
                       type="email"
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}
-                      className="w-full bg-black/30 border border-gray-800 py-3 pl-12 pr-4 text-white placeholder-gray-500 focus:border-emerald-400 focus:ring-0 focus:outline-none transition-colors"
+                      className="w-full bg-black/30 border border-gray-800 py-3 pl-12 pr-4 text-white placeholder-gray-500 focus:border-pink-600 focus:ring-0 focus:outline-none transition-colors"
                       placeholder="Enter your email"
                       required
                     />
@@ -71,7 +71,7 @@ export default function LoginOTP() {
                 <button
                   type="submit"
                   disabled={isLoading}
-                  className="w-full bg-emerald-400 text-black py-3 text-sm tracking-wider hover:bg-emerald-300 transition-colors duration-300 flex items-center justify-center disabled:opacity-50 disabled:cursor-not-allowed"
+                  className="w-full bg-pink-600 text-black py-3 text-sm tracking-wider hover:bg-pink-400 transition-colors duration-300 flex items-center justify-center disabled:opacity-50 disabled:cursor-not-allowed"
                 >
                   {isLoading ? 'SENDING...' : (
                     <>
@@ -83,7 +83,7 @@ export default function LoginOTP() {
                 
                 {/* Back to Login Link */}
                 <div className="text-center text-sm text-gray-400">
-                  <a href="/login" className="text-emerald-400 hover:text-emerald-300 transition-colors">
+                  <a href="/login" className="text-pink-600 hover:text-pink-400 transition-colors">
                     Back to password login
                   </a>
                 </div>
@@ -101,7 +101,7 @@ export default function LoginOTP() {
                       type="text"
                       value={otp}
                       onChange={(e) => setOtp(e.target.value)}
-                      className="w-full bg-black/30 border border-gray-800 py-3 pl-12 pr-4 text-white placeholder-gray-500 focus:border-emerald-400 focus:ring-0 focus:outline-none transition-colors"
+                      className="w-full bg-black/30 border border-gray-800 py-3 pl-12 pr-4 text-white placeholder-gray-500 focus:border-pink-600 focus:ring-0 focus:outline-none transition-colors"
                       placeholder="Enter the code sent to your email"
                       required
                     />
@@ -112,7 +112,7 @@ export default function LoginOTP() {
                 <button
                   type="submit"
                   disabled={isLoading}
-                  className="w-full bg-emerald-400 text-black py-3 text-sm tracking-wider hover:bg-emerald-300 transition-colors duration-300 flex items-center justify-center disabled:opacity-50 disabled:cursor-not-allowed"
+                  className="w-full bg-pink-600 text-black py-3 text-sm tracking-wider hover:bg-pink-400 transition-colors duration-300 flex items-center justify-center disabled:opacity-50 disabled:cursor-not-allowed"
                 >
                   {isLoading ? 'VERIFYING...' : (
                     <>
@@ -128,7 +128,7 @@ export default function LoginOTP() {
                   <button 
                     type="button" 
                     onClick={() => setStep(1)} 
-                    className="text-emerald-400 hover:text-emerald-300 transition-colors"
+                    className="text-pink-600 hover:text-pink-400 transition-colors"
                   >
                     Resend OTP
                   </button>

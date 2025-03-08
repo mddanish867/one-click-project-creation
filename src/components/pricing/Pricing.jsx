@@ -46,7 +46,7 @@ const Pricing = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-thin tracking-wider">PRICING</h2>
-            <div className="w-20 h-px bg-emerald-400 mx-auto mt-4" />
+            <div className="w-20 h-px bg-pink-600 mx-auto mt-4" />
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {plans.map((plan, index) => (
@@ -58,7 +58,7 @@ const Pricing = () => {
               >
                 <div className="bg-gray-800 py-6 px-8 text-center">
                   <h3 className="text-2xl font-light">{plan.name}</h3>
-                  <div className="text-4xl font-light text-emerald-400 my-4">
+                  <div className="text-4xl font-light text-pink-600 my-4">
                     ${plan.price}
                     {plan.price > 0 && <span className="text-sm text-gray-400">/mo</span>}
                   </div>
@@ -68,7 +68,7 @@ const Pricing = () => {
                     {plan.features.map((feature, i) => (
                       <li key={i} className="flex items-center">
                         {feature.included ? (
-                          <CheckCircle className="w-5 h-5 text-emerald-400 mr-2" />
+                          <CheckCircle className="w-5 h-5 text-pink-600 mr-2" />
                         ) : (
                           <XCircle className="w-5 h-5 text-red-400 mr-2" />
                         )}
@@ -81,7 +81,7 @@ const Pricing = () => {
                   <button
                     className={`px-6 py-3 rounded-md transition-colors duration-300 ${
                       plan.price > 0
-                        ? 'bg-emerald-400 text-black hover:bg-emerald-300'
+                        ? 'bg-pink-600 text-black hover:bg-pink-400'
                         : 'bg-gray-700 text-gray-400 hover:bg-gray-600'
                     }`}
                   >
